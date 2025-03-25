@@ -1,18 +1,21 @@
 'use client';
 import LogoImage from '../../../public/images/pharmacy-paddi-small-logo.png';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { LogOut, Menu, Settings, User, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { logout } from '@/util/auth';
 // import { fetchAdminProfile } from "@/util/api";
-import Sidebar from './sidebar';
 import SidebarInner from './sidebarInner';
 
+interface headerNullProps {
+    children?: ReactNode
+}
 
 
-export default function Header() {
+
+const HeaderNull: React.FC<headerNullProps> = ({ children }) => {
 
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement | null>(null);
@@ -45,22 +48,6 @@ export default function Header() {
     }, []);
 
 
-    useEffect(() => {
-        async function getAdminData() {
-            // const token = localStorage.getItem("admin_token"); // Ensure token is stored after login
-            // if (!token) {
-            //     console.error("No admin token found");
-            //     return;
-            // }
-
-            // const admin = await fetchAdminProfile(token);
-            // if (admin) setAdminName(admin.name);
-            // setLoading(false);
-        }
-
-        getAdminData();
-    }, []);
-
 
     useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
@@ -88,12 +75,12 @@ export default function Header() {
                             </button>
                             <div className="flex h-16 shrink-0 transition-[width] duration-300 me-4 lg:h-[76px] lg:border-solid lg:border-gray-200/80 lg:me-8 lg:border-e lg:w-[257px]">
 
-                                <div className="inline-flex items-center gap-1">
+                                <Link href='/admin/dashboard' className="inline-flex items-center gap-1">
                                     <Image src={LogoImage} alt='PharmacyPaddy Logo' priority className='size-10' width={50} height={50} />
                                     <span className='font-semibold '>
                                         Pharmacy<span className='text-charistan'>Paddy</span>
                                     </span>
-                                </div>
+                                </Link>
                             </div>
                         </div>
                         <div className="relative ml-auto mr-1.5 flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center rounded-full border border-gray-200 bg-gray-50 py-4 text-gray-600 hover:border-transparent hover:border-gray-200 hover:bg-white hover:text-accent sm:mr-6 lg:hidden xl:hidden">
@@ -162,7 +149,6 @@ export default function Header() {
                                     A
                                 </span>
                                 <div className="hidden w-[calc(100%-48px)] flex-col items-start space-y-0.5 truncate text-sm ltr:text-left rtl:text-right xl:flex">
-                                    {/* */}
 
                                     {loading ? (
                                         <svg
@@ -191,6 +177,12 @@ export default function Header() {
                                     )}
 
 
+                                    {/* <span className="w-full truncate font-semibold capitalize text-black">
+                                    Jhon Doe
+                                </span>
+                                <span className="w-full truncate text-xs capitalize text-gray-400">
+                                    super admin
+                                </span> */}
                                 </div>
                             </button>
 
@@ -203,7 +195,7 @@ export default function Header() {
                                 >
                                     <li className="px-4 py-2 hover:bg-charistan/10 group cursor-pointer transition-all rounded-md">
 
-                                        <Link href="/admin/profile" className='flex items-center gap-2 group-hover:text-charistan text-sm'>
+                                        <Link href="#" className='flex items-center gap-2 group-hover:text-charistan text-sm'>
                                             <User className='size-5 stroke-current group-hover:stroke-charistan' />
                                             Profile
                                         </Link>
@@ -248,11 +240,11 @@ export default function Header() {
                 >
                     <X size={24} />
                 </button>
-                <SidebarInner />
-
-
+                {children}
             </motion.div>
         </>
 
     )
 }
+
+export default HeaderNull;

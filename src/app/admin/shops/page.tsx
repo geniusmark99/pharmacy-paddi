@@ -1621,8 +1621,8 @@ const AdminShops: React.FC = () => {
 
 export default function DashboardPage() {
     return (
-        <ProtectedRoute>
-            <AdminShops />
-        </ProtectedRoute>
+        // <ProtectedRoute>
+        <AdminShops />
+        // </ProtectedRoute>
     );
 }

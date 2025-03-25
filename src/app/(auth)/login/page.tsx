@@ -7,8 +7,6 @@ import { useAuth } from "../../../util/api";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useToast } from "@/hooks/useToast";
 
-
-
 interface LoginErrors {
     email?: string[]
     password?: string[]

@@ -1772,8 +1772,8 @@ const AdminProducts: React.FC = () => {
 
 export default function DashboardPage() {
     return (
-        <ProtectedRoute>
-            <AdminProducts />
-        </ProtectedRoute>
+        // <ProtectedRoute>
+        <AdminProducts />
+        // </ProtectedRoute>
     );
 }

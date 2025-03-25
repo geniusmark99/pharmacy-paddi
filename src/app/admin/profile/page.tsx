@@ -44,7 +44,7 @@ const AdminProfile: React.FC = () => {
                     </div>
                     <div className="flex-1 self-center">
                         <h3 className="mb-1.5 break-all text-xl font-semibold leading-none text-muted-black">
-                            Pharm. Enoch
+                            Jhon Doe
                         </h3>
                         <div className="flex items-start gap-1 ">
                             <svg
@@ -64,9 +64,9 @@ const AdminProfile: React.FC = () => {
                             </svg>
                             <a
                                 className="break-all text-xs font-normal text-gray-500"
-                                href="mailTo:admin@pharamacypadddi.com"
+                                href="mailTo:admin@demo.com"
                             >
-                                admin@pharmacypaddi.com
+                                admin@demo.com
                             </a>
                         </div>
                     </div>
@@ -83,25 +83,25 @@ const AdminProfile: React.FC = () => {
         }>
             <div className="h-full p-5 md:p-8">
                 <div className="flex border-b border-dashed border-gray-300 pb-5 md:pb-7">
-                    <h1 className="text-lg font-semibold text-gray-700">Add Products</h1>
+                    <h1 className="text-lg font-semibold text-gray-700">Profile Settings</h1>
                 </div>
                 <form>
                     <div className="my-5 flex flex-wrap border-b border-dashed border-gray-300 pb-8 sm:my-8">
                         <div className="sm:pe-4 md:pe-5 w-full px-0 pb-5 sm:w-4/12 sm:py-8 md:w-1/3">
-                            <h4 className="text-base font-semibold mb-2 text-gray-700">Product name</h4>
-                            <p className="text-sm text-gray-500">Enter the product name here</p>
+                            <h4 className="text-base font-semibold mb-2 text-gray-700">Email</h4>
+                            <p className="text-sm text-gray-500">Change your email from here</p>
                         </div>
                         <div className="rounded bg-white p-5 shadow shadow-gray-300 md:p-8 mb-5 w-full sm:w-8/12 md:w-2/3">
                             <div className="mb-5">
                                 <label
                                     className="flex text-gray-700 font-semibold text-sm leading-none mb-3"
-                                    htmlFor="product_name"
+                                    htmlFor="email"
                                 >
-                                    Product name
+                                    Email
                                 </label>
                                 <input
-                                    id="product_name"
-                                    name="product_name"
+                                    id="email"
+                                    name="email"
                                     type="text"
                                     className="px-4 flex items-center w-full rounded appearance-none transition duration-300 ease-in-out text-heading text-sm focus:outline-none focus:ring-0 border border-gray-300 focus:border-charistan h-12"
                                     autoComplete="off"
@@ -128,9 +128,9 @@ const AdminProfile: React.FC = () => {
                 <form>
                     <div className="flex flex-wrap pb-8 my-5 border-b border-dashed border-gray-300 sm:my-8">
                         <div className="w-full px-0 pb-5 sm:w-4/12 sm:py-8 sm:pe-4 md:w-1/3 md:pe-5">
-                            <h4 className="text-base font-semibold text-gray-700 mb-2">Product Image</h4>
+                            <h4 className="text-base font-semibold text-gray-700 mb-2">Avatar</h4>
                             <p className="text-sm text-gray-500">
-                                Upload your product image from here. Dimension of the product should be
+                                Upload your profile image from here. Dimension of the avatar should be
                                 140 x 140px
                             </p>
                         </div>
@@ -172,28 +172,27 @@ const AdminProfile: React.FC = () => {
                             </section>
                         </div>
                     </div>
-
                     <div className="flex flex-wrap pb-8 my-5 border-b border-dashed border-gray-300 sm:my-8">
                         <div className="w-full px-0 pb-5 sm:w-4/12 sm:py-8 sm:pe-4 md:w-1/3 md:pe-5">
                             <h4 className="text-base font-semibold text-gray-700 mb-2">
-                                Product Info
+                                Email Notification
                             </h4>
                             <p className="text-sm text-gray-500">
-                                Add your product information from here
+                                Set your email notification for messaging feature
                             </p>
                         </div>
                         <div className="rounded bg-white p-5 shadow md:p-8 w-full mb-5 sm:w-8/12 md:w-2/3">
                             <div className="mb-5">
                                 <label
                                     className="flex text-gray-700 font-semibold text-sm leading-none mb-3"
-                                    htmlFor="product_fullname"
+                                    htmlFor="profile.notifications.email"
                                 >
-                                    Product fullname
+                                    Notification email
                                 </label>
                                 <input
-                                    id="product_fullname"
-                                    name="product_fullname"
-                                    type="text"
+                                    id="profile.notifications.email"
+                                    name="profile.notifications.email"
+                                    type="email"
                                     className="px-4 flex items-center w-full rounded appearance-none transition duration-300 ease-in-out text-heading text-sm focus:outline-none focus:ring-0 border border-gray-300 focus:border-charistan h-12"
                                     autoComplete="off"
                                     autoCorrect="off"
@@ -202,98 +201,48 @@ const AdminProfile: React.FC = () => {
                                     aria-invalid="false"
                                 />
                             </div>
-                            <div className="mb-6">
-                                <label
-                                    className="flex text-gray-700 font-semibold text-sm leading-none mb-3"
-                                    htmlFor="product_price"
-                                >
-                                    Product Price
-                                </label>
-                                <div className='flex items-center gap-x-2 border border-gray-300 focus:border-charistan rounded px-2'>
-                                    <div className='text-gray-400'>&#8358;</div>
-                                    <input
-                                        id="product_price"
-                                        name="product_price"
-                                        className="align-middle py-3 px-4 w-full  appearance-none transition duration-300 ease-in-out text-heading text-sm focus:outline-none focus:ring-0 border-none "
-                                        autoComplete="off"
-                                        autoCorrect="off"
-                                        autoCapitalize="off"
-                                        spellCheck="false"
-                                        defaultValue={""}
-                                    />
+                            <div className="flex items-center gap-x-4">
+                                <div className="flex items-center gap-x-4">
+                                    <button
+                                        className="bg-gray-300 relative inline-flex h-6 w-11 items-center rounded-full focus:outline-none "
+                                        dir="ltr"
+                                        id="profile.notifications.enable"
+                                        role="switch"
+                                        type="button"
+                                        tabIndex={0}
+                                        aria-checked="false"
+                                        data-headlessui-state=""
+                                    >
+                                        <span className="sr-only">Enable </span>
+                                        <span className="translate-x-1 inline-block h-4 w-4 transform rounded-full bg-white transition-transform" />
+                                    </button>
                                 </div>
-
-                            </div>
-                            <div className="mb-5">
-                                <label
-                                    className="flex text-gray-700 font-semibold text-sm leading-none mb-3"
-                                    htmlFor="product_manufacturer"
-                                >
-                                    Product manufacturer
+                                <label className="flex text-gray-700 font-semibold text-sm leading-none mb-3">
+                                    Enable Notification
                                 </label>
-                                <div className="">
-                                    <input
-                                        className="form-control !flex !items-center !w-full !appearance-none !transition !duration-300 !ease-in-out !text-heading !text-sm focus:!outline-none focus:!ring-0 !border !border-gray-300 !rounded focus:!border-charistan !h-12"
-                                        placeholder=""
-                                        type="text"
-                                        name='product_manufacturer'
-                                        defaultValue=""
-                                    />
-
-                                </div>
                             </div>
-
-                            <div className="mb-5">
-                                <label
-                                    className="flex text-gray-700 font-semibold text-sm leading-none mb-3"
-                                    htmlFor="product_expiring_date"
-                                >
-                                    Product Expiring date
-                                </label>
-                                <div className="">
-                                    <input
-                                        className="form-control !flex !items-center !w-full !appearance-none !transition !duration-300 !ease-in-out !text-heading !text-sm focus:!outline-none focus:!ring-0 !border !border-gray-300 !rounded focus:!border-charistan !h-12"
-                                        placeholder=""
-                                        type="text"
-                                        name='product_expiring_date'
-                                        defaultValue=""
-                                    />
-
-                                </div>
-                            </div>
-                        </div>
-                        <div className="w-full text-end">
-                            <button
-                                data-variant="normal"
-                                className="inline-flex items-center justify-center flex-shrink-0 font-semibold leading-none rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-charistan-700 bg-charistan text-light border border-transparent hover:bg-charistan/80 px-5 py-0 h-12"
-                            >
-                                Save
-                            </button>
                         </div>
                     </div>
-                </form>
-
-                <form>
                     <div className="flex flex-wrap pb-8 my-5 border-b border-dashed border-gray-300 sm:my-8">
                         <div className="w-full px-0 pb-5 sm:w-4/12 sm:py-8 sm:pe-4 md:w-1/3 md:pe-5">
                             <h4 className="text-base font-semibold text-gray-700 mb-2">
-                                Shop Address
+                                Information
                             </h4>
                             <p className="text-sm text-gray-500">
-                                Add your physical shop address from here
+                                Add your profile information from here
                             </p>
                         </div>
                         <div className="rounded bg-white p-5 shadow md:p-8 w-full mb-5 sm:w-8/12 md:w-2/3">
                             <div className="mb-5">
                                 <label
                                     className="flex text-gray-700 font-semibold text-sm leading-none mb-3"
-                                    htmlFor="shop_city"
+                                    htmlFor="name"
                                 >
-                                    Shop City
+                                    Name
                                 </label>
                                 <input
-                                    id="shop_city"
-                                    name="shop_city"
+                                    id="name"
+                                    name="name"
                                     type="text"
                                     className="px-4 flex items-center w-full rounded appearance-none transition duration-300 ease-in-out text-heading text-sm focus:outline-none focus:ring-0 border border-gray-300 focus:border-charistan h-12"
                                     autoComplete="off"
@@ -306,13 +255,13 @@ const AdminProfile: React.FC = () => {
                             <div className="mb-6">
                                 <label
                                     className="flex text-gray-700 font-semibold text-sm leading-none mb-3"
-                                    htmlFor="shop_city"
+                                    htmlFor="profile.bio"
                                 >
-                                    Shop City
+                                    Bio
                                 </label>
                                 <textarea
-                                    id="shop_city"
-                                    name="shop_city"
+                                    id="profile.bio"
+                                    name="profile.bio"
                                     className="align-middle py-3 px-4 w-full rounded appearance-none transition duration-300 ease-in-out text-heading text-sm focus:outline-none focus:ring-0 border border-gray-300 focus:border-charistan"
                                     autoComplete="off"
                                     autoCorrect="off"
@@ -325,38 +274,31 @@ const AdminProfile: React.FC = () => {
                             <div className="mb-5">
                                 <label
                                     className="flex text-gray-700 font-semibold text-sm leading-none mb-3"
-                                    htmlFor="shop_state"
+                                    htmlFor="profile.contact"
                                 >
-                                    Shop State
+                                    Contact Number
                                 </label>
-                                <div className="">
+                                <div className=" react-tel-input ">
+                                    <div className="special-label">Phone</div>
                                     <input
-                                        className="form-control !flex !items-center !w-full !appearance-none !transition !duration-300 !ease-in-out !text-heading !text-sm focus:!outline-none focus:!ring-0 !border !border-gray-300 !rounded focus:!border-charistan !h-12"
-                                        placeholder=""
-                                        type="text"
-                                        name='shop_state'
+                                        className="form-control !p-0 !pe-4 !ps-14 !flex !items-center !w-full !appearance-none !transition !duration-300 !ease-in-out !text-heading !text-sm focus:!outline-none focus:!ring-0 !border !border-gray-300 !rounded focus:!border-charistan !h-12"
+                                        placeholder="1 (702) 123-4567"
+                                        type="tel"
                                         defaultValue=""
                                     />
-
-                                </div>
-                            </div>
-
-                            <div className="mb-5">
-                                <label
-                                    className="flex text-gray-700 font-semibold text-sm leading-none mb-3"
-                                    htmlFor="shop_street_address"
-                                >
-                                    Shop Street Address
-                                </label>
-                                <div className="">
-                                    <input
-                                        className="form-control !flex !items-center !w-full !appearance-none !transition !duration-300 !ease-in-out !text-heading !text-sm focus:!outline-none focus:!ring-0 !border !border-gray-300 !rounded focus:!border-charistan !h-12"
-                                        placeholder=""
-                                        type="text"
-                                        name='shop_street_address'
-                                        defaultValue=""
-                                    />
-
+                                    <div className="flag-dropdown ">
+                                        <div
+                                            className="selected-flag"
+                                            title=""
+                                            tabIndex={0}
+                                            role="button"
+                                            aria-haspopup="listbox"
+                                        >
+                                            <div className="flag 0">
+                                                <div className="arrow" />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -372,8 +314,167 @@ const AdminProfile: React.FC = () => {
                 </form>
 
 
-
-
+                <form >
+                    <div className="my-5 flex flex-wrap sm:my-8">
+                        <div className="sm:pe-4 md:pe-5 w-full px-0 pb-5 sm:w-4/12 sm:py-8 md:w-1/3">
+                            <h4 className="text-base font-semibold text-gray-700 mb-2">
+                                Password
+                            </h4>
+                            <p className="text-sm text-gray-500">Change your password from here</p>
+                        </div>
+                        <div className="rounded bg-white p-5 shadow md:p-8 mb-5 w-full sm:w-8/12 md:w-2/3">
+                            <div className="mb-5">
+                                <div className="mb-3 flex items-center justify-between">
+                                    <label
+                                        htmlFor="oldPassword"
+                                        className="text-sm font-semibold leading-none text-gray-700"
+                                    >
+                                        Old Password
+                                    </label>
+                                </div>
+                                <div className="relative">
+                                    <input
+                                        id="oldPassword"
+                                        name="oldPassword"
+                                        type="password"
+                                        className="ltr:pl-4 rtl:pr-4 ltr:pr-12 rtl:pl-12 h-12 flex items-center w-full rounded appearance-none transition duration-300 ease-in-out text-heading text-sm focus:outline-none focus:ring-0 border border-border-base focus:border-charistan"
+                                        autoComplete="off"
+                                        autoCorrect="off"
+                                        autoCapitalize="off"
+                                        spellCheck="false"
+                                    />
+                                    <label
+                                        htmlFor="oldPassword"
+                                        className="absolute top-5 -mt-2 text-gray-500 end-4"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            className="h-5 w-5"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth="1.5"
+                                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                                            />
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth="1.5"
+                                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                                            />
+                                        </svg>
+                                    </label>
+                                </div>
+                            </div>
+                            <div className="mb-5">
+                                <div className="mb-3 flex items-center justify-between">
+                                    <label
+                                        htmlFor="newPassword"
+                                        className="text-sm font-semibold leading-none text-gray-700"
+                                    >
+                                        New Password
+                                    </label>
+                                </div>
+                                <div className="relative">
+                                    <input
+                                        id="newPassword"
+                                        name="newPassword"
+                                        type="password"
+                                        className="ltr:pl-4 rtl:pr-4 ltr:pr-12 rtl:pl-12 h-12 flex items-center w-full rounded appearance-none transition duration-300 ease-in-out text-heading text-sm focus:outline-none focus:ring-0 border border-border-base focus:border-charistan"
+                                        autoComplete="off"
+                                        autoCorrect="off"
+                                        autoCapitalize="off"
+                                        spellCheck="false"
+                                    />
+                                    <label
+                                        htmlFor="newPassword"
+                                        className="absolute top-5 -mt-2 text-gray-500 end-4"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            className="h-5 w-5"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth="1.5"
+                                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                                            />
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth="1.5"
+                                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                                            />
+                                        </svg>
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="mb-3 flex items-center justify-between">
+                                    <label
+                                        htmlFor="passwordConfirmation"
+                                        className="text-sm font-semibold leading-none text-gray-700"
+                                    >
+                                        Confirm Password
+                                    </label>
+                                </div>
+                                <div className="relative">
+                                    <input
+                                        id="passwordConfirmation"
+                                        name="passwordConfirmation"
+                                        type="password"
+                                        className="ltr:pl-4 rtl:pr-4 ltr:pr-12 rtl:pl-12 h-12 flex items-center w-full rounded appearance-none transition duration-300 ease-in-out text-heading text-sm focus:outline-none focus:ring-0 border border-border-base focus:border-charistan"
+                                        autoComplete="off"
+                                        autoCorrect="off"
+                                        autoCapitalize="off"
+                                        spellCheck="false"
+                                    />
+                                    <label
+                                        htmlFor="passwordConfirmation"
+                                        className="absolute top-5 -mt-2 text-gray-500 end-4"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            className="h-5 w-5"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth="1.5"
+                                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                                            />
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth="1.5"
+                                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                                            />
+                                        </svg>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="text-end w-full">
+                            <button
+                                data-variant="normal"
+                                className="inline-flex items-center justify-center flex-shrink-0 font-semibold leading-none rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-charistan-700 bg-charistan text-light border border-transparent hover:bg-charistan/80 px-5 py-0 h-12"
+                            >
+                                Change Password
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
 
         </ContainerNoSideBar>
